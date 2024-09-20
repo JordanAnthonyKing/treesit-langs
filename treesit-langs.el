@@ -134,6 +134,7 @@ elisp-tree-sitter) to a query string compatible with treesit."
   '(
     (agda-mode            . agda)
     (asm-mode             . asm)
+    (angular-ts-mode      . angular)
     (bash-ts-mode         . bash)
     (c++-mode             . cpp)
     (c++-ts-mode          . cpp)
