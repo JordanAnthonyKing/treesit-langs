@@ -134,6 +134,7 @@ PATTERNS is a query string compatible with `elisp-tree-sitter'."
   '(
     (agda-mode            . agda)
     (asm-mode             . asm)
+    (angular-ts-mode      . angular)
     (bash-ts-mode         . bash)
     (c++-mode             . cpp)
     (c++-ts-mode          . cpp)
