@@ -34,7 +34,7 @@
   :group 'treesit-faces)
 
 (defface treesit-face-function.builtin
-  '((default :inherit font-lock-builtin-face))
+  '((default :inherit treesit-face-function))
   "Face for builtin functions."
   :group 'treesit-faces)
 
@@ -79,7 +79,7 @@
   :group 'treesit-faces)
 
 (defface treesit-face-type.builtin
-  '((default :inherit font-lock-builtin-face))
+  '((default :inherit treesit-face-type))
   "Face for builtin types."
   :group 'treesit-faces)
 
@@ -109,7 +109,7 @@
   :group 'treesit-faces)
 
 (defface treesit-face-variable.builtin
-  '((default :inherit font-lock-builtin-face))
+  '((default :inherit treesit-face-variable))
   "Face for builtin variables."
   :group 'treesit-faces)
 
@@ -118,9 +118,8 @@
   "Face for \"dangerous\" variables, e.g. mutable or dynamically-bound."
   :group 'treesit-faces)
 
-;;; TODO: Define a more sensible default.
 (defface treesit-face-property
-  '((default :inherit font-lock-constant-face :slant italic))
+  '((default :inherit font-lock-variable-name-face :slant italic))
   "Face for properties."
   :group 'treesit-faces)
 
@@ -207,7 +206,7 @@
   :group 'treesit-faces)
 
 (defface treesit-face-constant.builtin
-  '((default :inherit font-lock-builtin-face))
+  '((default :inherit treesit-face-constant))
   "Face for builtin constants."
   :group 'treesit-faces)
 
@@ -266,7 +265,7 @@
 
 ;;; ------------------------------------
 ;;; Aliases
-(put 'treesit-face-boolean 'face-alias 'treesit-face-type.builtin)
+(put 'treesit-face-boolean 'face-alias 'treesit-face-constant.builtin)
 (put 'treesit-face-character 'face-alias 'treesit-face-variable)
 (put 'treesit-face-character.special 'face-alias 'treesit-face-variable)
 (put 'treesit-face-class 'face-alias 'treesit-face-type)
@@ -282,7 +281,7 @@
 (put 'treesit-face-include 'face-alias 'treesit-face-function.macro)
 (put 'treesit-face-keyword.conditional 'face-alias 'treesit-face-keyword)
 (put 'treesit-face-keyword.coroutine 'face-alias 'treesit-face-keyword)
-(put 'treesit-face-keyword.directive 'face-alias 'treesit-face-keyword)
+(put 'treesit-face-keyword.directive 'face-alias 'treesit-face-function.macro)
 (put 'treesit-face-keyword.directive.define 'face-alias 'treesit-face-define)
 (put 'treesit-face-keyword.exception 'face-alias 'treesit-face-keyword)
 (put 'treesit-face-keyword.function 'face-alias 'treesit-face-function)
@@ -305,6 +304,8 @@
 (put 'treesit-face-storageclass.lifetime 'face-alias 'treesit-face-type.argument)
 (put 'treesit-face-string.escape 'face-alias 'treesit-face-escape)
 (put 'treesit-face-string.regex 'face-alias 'treesit-face-string)
+(put 'treesit-face-string.special.path 'face-alias 'treesit-face-string)
+(put 'treesit-face-string.special.symbol 'face-alias 'treesit-face-variable)
 (put 'treesit-face-string.special.url 'face-alias 'treesit-face-string.uri)
 (put 'treesit-face-tag.attribute 'face-alias 'treesit-face-attribute)
 (put 'treesit-face-tag.delimiter 'face-alias 'treesit-face-punctuation.bracket)
